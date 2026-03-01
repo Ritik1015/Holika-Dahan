@@ -93,10 +93,11 @@ button:hover{
 
     <button id="loveBtn" onclick="showLove()">Tap Here ❤️</button>
 
-    <div id="gifBox">
-        <!-- Yaha apna gif ka naam daal -->
-        <img src="love.gif" alt="Love GIF">
-    </div>
+    <div id="gifBox" style="display:none; margin-top:20px;">
+    <video id="loveVideo" width="100%" autoplay loop muted playsinline>
+        <source src="love.mp4" type="video/mp4">
+    </video>
+</div>
 
     <audio id="bgMusic">
         <source src="song.mp3" type="audio/mpeg">
