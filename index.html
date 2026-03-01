@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Holika Dahan Bhavya ❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    background: linear-gradient(to top, #ff512f, #dd2476);
+    font-family: 'Segoe UI', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+    color:white;
+}
+
+.container{
+    background: rgba(0,0,0,0.5);
+    padding:30px;
+    border-radius:20px;
+    width:90%;
+    max-width:500px;
+    box-shadow:0 0 20px rgba(0,0,0,0.6);
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1{
+    font-size:28px;
+}
+
+p{
+    font-size:16px;
+    line-height:1.6;
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#dd2476;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+button:hover{
+    background:#ffd1dc;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🔥 Happy Holika Dahan Bhavya ❤️</h1>
+
+    <p>
+        From Dudu 💌<br><br>
+        Aaj is pavitra agni ke saamne,
+        main apni saari galtiyon ko jalana chahta hoon... 🔥<br><br>
+
+        Agar kabhi maine tumhe hurt kiya,
+        ya tumhari feelings ko samajhne mein der ki,
+        toh mujhe maaf kar dena Bhavya… ❤️<br><br>
+
+        Aap mere liye khud se bhi zyada imprtant ho.
+        Main bas ek mauka aur chahta hoon…
+        taaki main prove kar saku ki mera pyaar sachcha hai. 🤍<br><br>
+
+        Is Holika Dahan par,
+        hum apni misunderstandings ko jala dein
+        aur ek nayi shuruaat karein… saath mein. ✨
+    </p>
+
+    <button onclick="playMusic()">Tap Here ❤️</button>
+
+    <audio id="bgMusic">
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+<script>
+function playMusic(){
+    var music = document.getElementById("bgMusic");
+    music.play();
+}
+</script>
+
+</body>
+</html>
