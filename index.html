@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Holika Dahan Bhavya ❤️</title>
 
@@ -54,9 +53,25 @@ button:hover{
     background:#ffd1dc;
 }
 
+#gifBox{
+    display:none;
+    margin-top:20px;
+    animation: pop 1s ease forwards;
+}
+
+#gifBox img{
+    width:100%;
+    border-radius:15px;
+}
+
 @keyframes fadeIn{
     from{opacity:0; transform:translateY(20px);}
     to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes pop{
+    from{opacity:0; transform:scale(0.8);}
+    to{opacity:1; transform:scale(1);}
 }
 </style>
 </head>
@@ -68,23 +83,20 @@ button:hover{
 
     <p>
         From Dudu 💌<br><br>
-        Aaj is pavitra agni ke saamne,
-        main apni saari galtiyon ko jalana chahta hoon... 🔥<br><br>
-
-        Agar kabhi maine tumhe hurt kiya,
-        ya tumhari feelings ko samajhne mein der ki,
-        toh mujhe maaf kar dena Bhavya… ❤️<br><br>
-
-        Aap mere liye khud se bhi zyada imprtant ho.
-        Main bas ek mauka aur chahta hoon…
+        Aaj is pavitra agni ke saamne, main apni saari galtiyon ko jalana chahta hoon... 🔥<br><br>
+        Agar kabhi maine tumhe hurt kiya, ya tumhari feelings ko samajhne mein der ki,
+        toh mujhe maaf kar dena Bhavya… 💕<br><br>
+        Aap mere liye khud se bhi zyada important ho. Main bas ek mauka aur chahta hoon...
         taaki main prove kar saku ki mera pyaar sachcha hai. 🤍<br><br>
-
-        Is Holika Dahan par,
-        hum apni misunderstandings ko jala dein
-        aur ek nayi shuruaat karein… saath mein. ✨
+        Is Holika Dahan par, hum apni misunderstandings ko jala dein aur ek nayi shuruaat karein... saath mein. ✨
     </p>
 
-    <button onclick="playMusic()">Tap Here ❤️</button>
+    <button id="loveBtn" onclick="showLove()">Tap Here ❤️</button>
+
+    <div id="gifBox">
+        <!-- Yaha apna gif ka naam daal -->
+        <img src="love.gif" alt="Love GIF">
+    </div>
 
     <audio id="bgMusic">
         <source src="song.mp3" type="audio/mpeg">
@@ -92,9 +104,10 @@ button:hover{
 </div>
 
 <script>
-function playMusic(){
-    var music = document.getElementById("bgMusic");
-    music.play();
+function showLove(){
+    document.getElementById("gifBox").style.display = "block";
+    document.getElementById("loveBtn").style.display = "none";
+    document.getElementById("bgMusic").play();
 }
 </script>
 
